@@ -1,0 +1,5 @@
+name: Bar Exchange
+type: module
+description: Bar exchange party!
+core: 8.x
+package: Custom

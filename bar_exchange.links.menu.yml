@@ -1,0 +1,117 @@
+bar_exchange.dashboard:
+  title: 'Bar Exchange'
+  route_name: entity.party.collection
+  parent: system.admin
+  weight: 1
+
+
+
+# Commodity menu items definition
+entity.commodities:
+  title: 'Commodities'
+  route_name: entity.commodity.collection
+  description: 'List Commodity entities'
+  parent: bar_exchange.dashboard
+  weight: 20
+
+entity.commodity.collection:
+  title: 'Commodity list'
+  route_name: entity.commodity.collection
+  description: 'List Commodity entities'
+  parent: entity.commodities
+  weight: 10
+
+commodity.admin.structure.settings:
+  title: 'Commodity settings'
+  description: 'Configure Commodity entities'
+  route_name: commodity.settings
+  parent: entity.commodities
+  weight: 15
+
+
+
+# Sale menu items definition
+bar_exchange.sales:
+  title: 'Sales'
+  route_name: entity.sale.collection
+  parent: bar_exchange.dashboard
+  weight: 30
+
+entity.sale.collection:
+  title: 'Sale list'
+  route_name: entity.sale.collection
+  description: 'List Sale entities'
+  parent: bar_exchange.sales
+  weight: 20
+
+sale.admin.structure.settings:
+  title: Sale settings
+  description: 'Configure Sale entities'
+  route_name: sale.settings
+  parent: bar_exchange.sales
+  weight: 25
+
+
+
+# Sale item menu items definition
+entity.sale_item.collection:
+  title: 'Sale item list'
+  route_name: entity.sale_item.collection
+  description: 'List Sale item entities'
+  parent: bar_exchange.sales
+  weight: 30
+
+sale_item.admin.structure.settings:
+  title: Sale item settings
+  description: 'Configure Sale item entities'
+  route_name: sale_item.settings
+  parent: bar_exchange.sales
+  weight: 35
+
+
+
+# Party menu items definition
+entity.parties:
+  title: 'Parties'
+  route_name: entity.party.collection
+  description: 'List Party entities'
+  parent: bar_exchange.dashboard
+  weight: 10
+
+entity.party.collection:
+  title: 'Party list'
+  route_name: entity.party.collection
+  description: 'List Party entities'
+  parent: entity.parties
+  weight: 1
+
+party.admin.structure.settings:
+  title: Party settings
+  description: 'Configure Party entities'
+  route_name: party.settings
+  parent: entity.parties
+  weight: 2
+
+
+
+# Price log menu items definition
+entity.price_logs:
+  title: 'Price logs'
+  route_name: entity.price_log.collection
+  description: 'List Price log entities'
+  parent: bar_exchange.dashboard
+  weight: 30
+
+entity.price_log.collection:
+  title: 'Price log list'
+  route_name: entity.price_log.collection
+  description: 'List Price log entities'
+  parent: entity.price_logs
+  weight: 10
+
+price_log.admin.structure.settings:
+  title: Price log settings
+  description: 'Configure Price log entities'
+  route_name: price_log.settings
+  parent: entity.price_logs
+  weight: 20

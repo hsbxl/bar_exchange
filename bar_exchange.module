@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains bar_exchange.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function bar_exchange_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the bar_exchange module.
+    case 'help.page.bar_exchange':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Bar exchange party!') . '</p>';
+      return $output;
+
+    default:
+  }
+}

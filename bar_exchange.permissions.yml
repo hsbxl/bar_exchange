@@ -1,0 +1,110 @@
+add commodity entities:
+  title: 'Create new Commodity entities'
+
+administer commodity entities:
+  title: 'Administer Commodity entities'
+  description: 'Allow to access the administration form to configure Commodity entities.'
+  restrict access: true
+
+delete commodity entities:
+  title: 'Delete Commodity entities'
+
+edit commodity entities:
+  title: 'Edit Commodity entities'
+
+access commodity overview:
+  title: 'Access the Commodity overview page'
+
+view published commodity entities:
+  title: 'View published Commodity entities'
+
+view unpublished commodity entities:
+  title: 'View unpublished Commodity entities'
+add sale entities:
+  title: 'Create new Sale entities'
+
+administer sale entities:
+  title: 'Administer Sale entities'
+  description: 'Allow to access the administration form to configure Sale entities.'
+  restrict access: true
+
+delete sale entities:
+  title: 'Delete Sale entities'
+
+edit sale entities:
+  title: 'Edit Sale entities'
+
+access sale overview:
+  title: 'Access the Sale overview page'
+
+view published sale entities:
+  title: 'View published Sale entities'
+
+view unpublished sale entities:
+  title: 'View unpublished Sale entities'
+add sale item entities:
+  title: 'Create new Sale item entities'
+
+administer sale item entities:
+  title: 'Administer Sale item entities'
+  description: 'Allow to access the administration form to configure Sale item entities.'
+  restrict access: true
+
+delete sale item entities:
+  title: 'Delete Sale item entities'
+
+edit sale item entities:
+  title: 'Edit Sale item entities'
+
+access sale item overview:
+  title: 'Access the Sale item overview page'
+
+view published sale item entities:
+  title: 'View published Sale item entities'
+
+view unpublished sale item entities:
+  title: 'View unpublished Sale item entities'
+add party entities:
+  title: 'Create new Party entities'
+
+administer party entities:
+  title: 'Administer Party entities'
+  description: 'Allow to access the administration form to configure Party entities.'
+  restrict access: true
+
+delete party entities:
+  title: 'Delete Party entities'
+
+edit party entities:
+  title: 'Edit Party entities'
+
+access party overview:
+  title: 'Access the Party overview page'
+
+view published party entities:
+  title: 'View published Party entities'
+
+view unpublished party entities:
+  title: 'View unpublished Party entities'
+add price log entities:
+  title: 'Create new Price log entities'
+
+administer price log entities:
+  title: 'Administer Price log entities'
+  description: 'Allow to access the administration form to configure Price log entities.'
+  restrict access: true
+
+delete price log entities:
+  title: 'Delete Price log entities'
+
+edit price log entities:
+  title: 'Edit Price log entities'
+
+access price log overview:
+  title: 'Access the Price log overview page'
+
+view published price log entities:
+  title: 'View published Price log entities'
+
+view unpublished price log entities:
+  title: 'View unpublished Price log entities'

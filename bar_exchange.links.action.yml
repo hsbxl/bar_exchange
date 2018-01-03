@@ -1,0 +1,25 @@
+entity.commodity.add_form:
+  route_name: entity.commodity.add_form
+  title: 'Add Commodity'
+  appears_on:
+    - entity.commodity.collection
+entity.sale.add_form:
+  route_name: entity.sale.add_form
+  title: 'Add Sale'
+  appears_on:
+    - entity.sale.collection
+entity.sale_item.add_form:
+  route_name: entity.sale_item.add_form
+  title: 'Add Sale item'
+  appears_on:
+    - entity.sale_item.collection
+entity.party.add_form:
+  route_name: entity.party.add_form
+  title: 'Add Party'
+  appears_on:
+    - entity.party.collection
+entity.price_log.add_form:
+  route_name: entity.price_log.add_form
+  title: 'Add Price log'
+  appears_on:
+    - entity.price_log.collection

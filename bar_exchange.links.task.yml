@@ -1,0 +1,110 @@
+# Commodity routing definition
+commodity.settings_tab:
+  route_name: commodity.settings
+  title: 'Settings'
+  base_route: commodity.settings
+
+entity.commodity.canonical:
+  route_name: entity.commodity.canonical
+  base_route: entity.commodity.canonical
+  title: 'View'
+
+entity.commodity.edit_form:
+  route_name: entity.commodity.edit_form
+  base_route: entity.commodity.canonical
+  title: 'Edit'
+
+entity.commodity.delete_form:
+  route_name:  entity.commodity.delete_form
+  base_route:  entity.commodity.canonical
+  title: Delete
+  weight: 10
+
+# Sale routing definition
+sale.settings_tab:
+  route_name: sale.settings
+  title: 'Settings'
+  base_route: sale.settings
+
+entity.sale.canonical:
+  route_name: entity.sale.canonical
+  base_route: entity.sale.canonical
+  title: 'View'
+
+entity.sale.edit_form:
+  route_name: entity.sale.edit_form
+  base_route: entity.sale.canonical
+  title: 'Edit'
+
+entity.sale.delete_form:
+  route_name:  entity.sale.delete_form
+  base_route:  entity.sale.canonical
+  title: Delete
+  weight: 10
+
+# Sale item routing definition
+sale_item.settings_tab:
+  route_name: sale_item.settings
+  title: 'Settings'
+  base_route: sale_item.settings
+
+entity.sale_item.canonical:
+  route_name: entity.sale_item.canonical
+  base_route: entity.sale_item.canonical
+  title: 'View'
+
+entity.sale_item.edit_form:
+  route_name: entity.sale_item.edit_form
+  base_route: entity.sale_item.canonical
+  title: 'Edit'
+
+entity.sale_item.delete_form:
+  route_name:  entity.sale_item.delete_form
+  base_route:  entity.sale_item.canonical
+  title: Delete
+  weight: 10
+
+# Party routing definition
+party.settings_tab:
+  route_name: party.settings
+  title: 'Settings'
+  base_route: party.settings
+
+entity.party.canonical:
+  route_name: entity.party.canonical
+  base_route: entity.party.canonical
+  title: 'View'
+
+entity.party.edit_form:
+  route_name: entity.party.edit_form
+  base_route: entity.party.canonical
+  title: 'Edit'
+
+entity.party.delete_form:
+  route_name:  entity.party.delete_form
+  base_route:  entity.party.canonical
+  title: Delete
+  weight: 10
+
+# Price log routing definition
+price_log.settings_tab:
+  route_name: price_log.settings
+  title: 'Settings'
+  base_route: price_log.settings
+
+entity.price_log.canonical:
+  route_name: entity.price_log.canonical
+  base_route: entity.price_log.canonical
+  title: 'View'
+
+entity.price_log.edit_form:
+  route_name: entity.price_log.edit_form
+  base_route: entity.price_log.canonical
+  title: 'Edit'
+
+entity.price_log.delete_form:
+  route_name:  entity.price_log.delete_form
+  base_route:  entity.price_log.canonical
+  title: Delete
+  weight: 10
+

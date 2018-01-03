@@ -1,0 +1,7 @@
+bar_exchane.pos:
+  path: '/bar_exchange/pos'
+  defaults:
+    _controller: '\Drupal\bar_exchange\Controller\PosController::pos'
+    _title: 'POS'
+  requirements:
+    _permission: 'access content'

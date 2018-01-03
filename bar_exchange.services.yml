@@ -1,0 +1,4 @@
+services:
+  bar_exchange.bar_exchange:
+    class: Drupal\bar_exchange\BarExchangeService
+    arguments: ['@entity.manager']

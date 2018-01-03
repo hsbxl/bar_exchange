@@ -1,0 +1,22 @@
+{#
+/**
+ * @file price_log.html.twig
+ * Default theme implementation to present Price log data.
+ *
+ * This template is used when viewing Price log pages.
+ *
+ *
+ * Available variables:
+ * - content: A list of content items. Use 'content' to print all content, or
+ * - attributes: HTML attributes for the container element.
+ *
+ * @see template_preprocess_price_log()
+ *
+ * @ingroup themeable
+ */
+#}
+<div{{ attributes.addClass('price_log') }}>
+  {% if content %}
+    {{- content -}}
+  {% endif %}
+</div>

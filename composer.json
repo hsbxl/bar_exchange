@@ -1,0 +1,14 @@
+{
+  "name": "drupal/bar_exchange",
+  "type": "drupal-module",
+  "description": "Bar exchange party!",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/bar_exchange",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/bar_exchange",
+    "source": "http://cgit.drupalcode.org/bar_exchange"
+  },
+  "require": { }
+}
