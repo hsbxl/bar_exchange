@@ -1,14 +1,14 @@
 {
-  "name": "drupal/bar_exchange",
-  "type": "drupal-module",
+  "name": "hsbxl/bar_exchange",
+  "type": "drupal-custom-module",
   "description": "Bar exchange party!",
   "keywords": ["Drupal"],
   "license": "GPL-2.0+",
-  "homepage": "https://www.drupal.org/project/bar_exchange",
+  "homepage": "https://github.com/hsbxl/bar_exchange",
   "minimum-stability": "dev",
   "support": {
-    "issues": "https://www.drupal.org/project/issues/bar_exchange",
-    "source": "http://cgit.drupalcode.org/bar_exchange"
+    "issues": "https://github.com/hsbxl/bar_exchange",
+    "source": "https://github.com/hsbxl/bar_exchange/issues"
   },
   "require": { }
 }
