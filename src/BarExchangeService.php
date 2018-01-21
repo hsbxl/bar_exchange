@@ -49,10 +49,10 @@ class BarExchangeService {
       'price' => $price,
       'party' => $this->getCurrentParty(),
       'sale_items' => $sale_items,
-      'date' => \Drupal::service('date.formatter')->format(DATETIME_STORAGE_TIMEZONE),
+      //'date' => \Drupal::service('date.formatter')->format(DATETIME_STORAGE_TIMEZONE),
     ])->save();
 
-    ksm(\Drupal::service('date.formatter')->format(DATETIME_STORAGE_TIMEZONE));
+    //ksm(\Drupal::service('date.formatter')->format(DATETIME_STORAGE_TIMEZONE));
 
     return 'foo bar';
   }

@@ -31,19 +31,7 @@ class PosController extends ControllerBase {
     //ksm($this->barexchange->getCurrentParty());
     //ksm($this->barexchange->getCommodities());
 
-    $order = [
-      'items' => [
-        '2' => 3,
-        '3' => 4
-      ],
-    ];
-
-    ksm($this->barexchange->newSale($order));
-
-    $element = array(
-      '#markup' => 'Hello, world',
-    );
-    return $element;
+    return \Drupal::formBuilder()->getForm('Drupal\bar_exchange\Form\BarExchangePOS');
   }
 
 }

@@ -1,5 +1,5 @@
 bar_exchane.pos:
-  path: '/bar_exchange/pos'
+  path: '/pos'
   defaults:
     _controller: '\Drupal\bar_exchange\Controller\PosController::pos'
     _title: 'POS'

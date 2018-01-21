@@ -9,6 +9,8 @@ use Drupal\Core\Entity\ContentEntityBase;
 use Drupal\Core\Entity\EntityChangedTrait;
 use Drupal\Core\Entity\EntityTypeInterface;
 use Drupal\user\UserInterface;
+use Drupal\Core\Datetime\DrupalDateTime;
+
 
 /**
  * Defines the Sale entity.

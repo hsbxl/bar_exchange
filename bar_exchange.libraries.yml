@@ -1,0 +1,9 @@
+POS:
+  version: VERSION
+  js:
+    js/pos.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/jquery
+    - core/drupal.date
