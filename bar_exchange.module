@@ -22,3 +22,20 @@ function bar_exchange_help($route_name, RouteMatchInterface $route_match) {
     default:
   }
 }
+
+/**
+ * Implements hook_views_data().
+ */
+function bar_exchange_views_data() {
+  /*$data['bar_exchange_price_log'] = [
+    'table' => [
+      'group' => 'Bar Exchange',
+      'provider' => 'bar_exchange',
+      'base' => [
+        'field' => 'id',
+        'title' => 'Bar exchange price logs',
+      ],
+    ],
+    'id' => [],
+  ];*/
+}

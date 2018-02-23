@@ -7,3 +7,18 @@ POS:
     - core/drupal
     - core/jquery
     - core/drupal.date
+
+charts:
+  version: VERSION
+  js:
+    js/charts.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/jquery
+    - core/drupal.date
+
+googlecharts:
+  version: VERSION
+  js:
+    https://www.gstatic.com/charts/loader.js: { type: external, minified: true }

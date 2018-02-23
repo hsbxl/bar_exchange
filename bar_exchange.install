@@ -1,0 +1,41 @@
+<?php
+
+
+/**
+ * Implements hook_schema().
+ */
+function bar_exchange_schema() {
+  $schema['bar_exchange_price_log'] = [
+    'description' => 'Logs of all price changes',
+    'fields' => [
+      'id' => [
+        'description' => 'Primary identifier.',
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ],
+      'commodity' => [
+        'description' => 'The ID of the commodity.',
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+      ],
+      'date' => [
+        'description' => 'timestamp',
+        'type' => 'int',
+        'default' => 0,
+        'not null' => TRUE,
+      ],
+      'price' => [
+        'description' => 'Price of current log.',
+        'type' => 'float',
+
+      ],
+    ],
+    'primary key' => ['id', 'commodity'],
+    'unique keys' => ['id' => ['id']],
+  ];
+
+  return $schema;
+}

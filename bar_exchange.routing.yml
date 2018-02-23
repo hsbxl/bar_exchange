@@ -5,3 +5,35 @@ bar_exchane.pos:
     _title: 'POS'
   requirements:
     _permission: 'access content'
+
+bar_exchane.barcode:
+  path: '/pos/barcode'
+  defaults:
+    form: '\Drupal\bar_exchange\Form\BarcodeForm'
+    _title: 'Pay by barcode'
+  requirements:
+    _permission: 'access content'
+
+bar_exchange.feed:
+  path: '/pos/feed'
+  defaults:
+    _controller: '\Drupal\bar_exchange\Controller\feed::all'
+    _title: 'Bar exchange Feed'
+  requirements:
+    _permission: 'access content'
+
+bar_exchange.admin_controller_form:
+  path: '/admin/config/user-interface/bar_exchange'
+  defaults:
+    _form: '\Drupal\bar_exchange\form\AdminForm'
+    _title: 'Bar exchange settings'
+  requirements:
+    _permission: 'access content'
+
+bar_exchange.charts_controller_all:
+  path: '/pos/charts'
+  defaults:
+    _controller: '\Drupal\bar_exchange\Controller\ChartsController::all'
+    _title: 'Bar Exchange Charts'
+  requirements:
+    _permission: 'access content'

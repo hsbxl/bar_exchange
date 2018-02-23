@@ -7,20 +7,32 @@ use Drupal\Core\Form\FormStateInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Drupal\Core\Session\AccountInterface;
 use Drupal\bar_exchange\BarExchangeService;
+use Drupal\user\PrivateTempStoreFactory;
+use Drupal\Core\Session\SessionManagerInterface;
 
 
 class BarExchangePOS extends FormBase {
   protected $account;
+  protected $tempStoreFactory;
+
 
   public function getFormId() {
     return 'bar_exchange_pos';
   }
 
-  public function __construct(AccountInterface $account, BarExchangeService $barExchange) {
+  public function __construct(AccountInterface $account,
+                              BarExchangeService $barExchange,
+                              PrivateTempStoreFactory $temp_store_factory,
+                              SessionManagerInterface $session_manager,
+                              AccountInterface $current_user) {
     $this->account = $account;
     $this->barexchange = $barExchange;
+    $this->tempStoreFactory = $temp_store_factory;
     $this->currentparty = $barExchange->getCurrentParty();
     $this->commodities = $barExchange->getCommodities();
+    $this->store = $this->tempStoreFactory->get('multistep_data');
+    $this->sessionManager = $session_manager;
+    $this->currentUser = $current_user;
   }
 
   /**
@@ -29,11 +41,20 @@ class BarExchangePOS extends FormBase {
   public static function create(ContainerInterface $container) {
     return new static(
       $container->get('current_user'),
-      $container->get('bar_exchange.bar_exchange')
+      $container->get('bar_exchange.bar_exchange'),
+      $container->get('user.private_tempstore'),
+      $container->get('session_manager'),
+      $container->get('current_user')
     );
   }
 
   public function buildForm(array $form, FormStateInterface $form_state) {
+
+    // Start a manual session for anonymous users.
+    if ($this->currentUser->isAnonymous() && !isset($_SESSION['multistep_form_holds_session'])) {
+      $_SESSION['multistep_form_holds_session'] = true;
+      $this->sessionManager->start();
+    }
 
     $form['current_party'] = [
       '#type' => 'html_tag',
@@ -79,9 +100,18 @@ class BarExchangePOS extends FormBase {
       '#suffix' => '</div>',
     ];
 
-    $form['submit'] = [
+    $form['submitheader'] = [
+      '#markup' => '<h4>Checkout</h4>',
+    ];
+
+    $form['submitcash'] = [
       '#type' => 'submit',
-      '#value' => $this->t('Checkout'),
+      '#value' => $this->t('Pay cash'),
+      '#suffix' => '&nbsp;',
+    ];
+    $form['submitbarcode'] = [
+      '#type' => 'submit',
+      '#value' => $this->t('Pay with a barcode'),
     ];
 
     $form['#attached']['library'][] = 'bar_exchange/POS';
@@ -93,12 +123,18 @@ class BarExchangePOS extends FormBase {
     foreach($form_state->getValue('commodities') as $commodity) {
       if($commodity['amount'] > 0) {
         $order['items'][$commodity['ID']] = $commodity['amount'];
-        //$commodity = entity_load('commodity', $commodity['ID']);
-        //ksm($amount, $commodity->label());
       }
     }
 
-    $this->barexchange->newSale($order);
-    ksm($order);
+    switch($form_state->getTriggeringElement()['#id']) {
+      case 'edit-submitcash':
+        $this->barexchange->newSale($order);
+        drupal_set_message('cash');
+        break;
+      case 'edit-submitbarcode':
+        drupal_set_message('barcode');
+        $form_state->setRedirect('bar_exchane.barcode');
+        break;
+    }
   }
 }

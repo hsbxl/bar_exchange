@@ -27,10 +27,6 @@ class PosController extends ControllerBase {
    *   A simple renderable array.
    */
   public function pos() {
-
-    //ksm($this->barexchange->getCurrentParty());
-    //ksm($this->barexchange->getCommodities());
-
     return \Drupal::formBuilder()->getForm('Drupal\bar_exchange\Form\BarExchangePOS');
   }
 

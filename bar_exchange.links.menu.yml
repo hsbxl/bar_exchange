@@ -4,6 +4,12 @@ bar_exchange.dashboard:
   parent: system.admin
   weight: 1
 
+bar_exchange.admin_form:
+  title: 'Bar exchange'
+  parent: system.admin_config_ui
+  route_name: bar_exchange.admin_controller_form
+  description: 'Bar exchange settings'
+  weight: 100
 
 
 # Commodity menu items definition
